@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <br>
+  <br>
+  <h2>Please give us 2 minutes of your time to fill this form:</h2>
+  <br>
+  <br>
+  <!-- here I ask for the gender of the user -->
+  <form>
+    <h3><label for="gender">1. Select your Gender</label></h3>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <!-- here I ask for the hobbies of the user -->
+  <script>
+    function handleNone() {
+      var none = document.getElementById("none");
+      var checkboxes = document.getElementsByName("hobby");
+
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].value !== "none") {
+          checkboxes[i].disabled = none.checked;
+        }
+      }
+    }
+  </script>
+  <br>
+  <br>
+  <h3>2. What are your hobbies?</h3>
+  <form>
+    <input type="checkbox" name="hobby" value="reading" onchange="handleNone()"> Reading<br>
+    <input type="checkbox" name="hobby" value="sports" onchange="handleNone()"> Sports<br>
+    <input type="checkbox" name="hobby" value="music" onchange="handleNone()"> Music<br>
+    <input type="checkbox" name="hobby" value="none" id="none" onchange="handleNone()"> None of these hobbies <br>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <!-- here I ask for the city of the user -->
+  <h3>3. Which city do you live in?</h3>
+  <form>
+    <select name="city">
+      <option value="">Select a city</option>
+      <option value="New York">New York</option>
+      <option value="Los Angeles">Los Angeles</option>
+      <option value="Chicago">Chicago</option>
+      <option value="Houston">Houston</option>
+      <option value="Phoenix">Phoenix</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <!-- here I ask for the favorite color of the user -->
+  <h3>4. What is your favorite color?</h3>
+  <form>
+    <input type="color" name="color">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <!-- here I ask for the date of birth of the user -->
+  <h3>5. What is your date of birth?</h3>
+  <form>
+    <input type="date" name="dob">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <h2>thank you for answering these questions</h2>
+</body>
+
+</html>
